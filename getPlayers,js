@@ -1,0 +1,8 @@
+var list = require("./playerDataWeek1.json")
+var myteam = require("./raw_myteam.json")
+
+
+
+
+var newteam = _.map(myteam.picks, function(player) { return _.find(list.elements, function(el) { return el.id === player.element })})
+console.log(newteam)

@@ -1,0 +1,24 @@
+{
+  "name": "transferpredictor-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getPlayers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurencesanchez1990/TransferPredictor-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurencesanchez1990/TransferPredictor-api/issues"
+  },
+  "homepage": "https://github.com/laurencesanchez1990/TransferPredictor-api#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  }
+}
