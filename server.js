@@ -9,7 +9,7 @@ const getTeam = () => {
 	return _.map(myteam.picks, function(player) { return _.find(list, function(el) { return el.id === player.element })})
 } 
 
-const getLowestScoringPlayers = () => {
+const lowestScoringPlayer = () => {
 	const team = getTeam();
 	const sortedTeam = _.sortBy(team, "total_points");
 	return sortedTeam[0]
@@ -24,7 +24,7 @@ const getNewPlayer = (playerValue, playerPos) => {
 
 
 app.get('/api/recommendations', (req, res) => {
-	const lowestScoringPlayer = getLowestScoringPlayers() 
+	const lowestScoringPlayer = lowestScoringPlayer() 
 	const newPlayers = getNewPlayer(lowestScoringPlayer.now_cost, lowestScoringPlayer.element_type)
 	res.json({playersFound: newPlayers.length, playerCost: lowestScoringPlayer.now_cost, playerPos: lowestScoringPlayer.element_type, data: newPlayers})
 })
