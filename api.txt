@@ -1,1 +1,11 @@
 https://fantasy.premierleague.com/drf/bootstrap-static current player info
+to do:
+do not show players you already have
+error handling: 
+	no more than 3 players from a single team
+	if there are no better players
+	include remaining budget
+selection algorithm:
+	incorporate ict index, total points, form
+	optional : include fixture difficulty component
+create a UI
