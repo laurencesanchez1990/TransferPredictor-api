@@ -9,3 +9,10 @@ selection algorithm:
 	incorporate ict index, total points, form
 	optional : include fixture difficulty component
 create a UI
+
+
+options:
+sotware development processes - "agile w/ evolutionary prototyping and version control"
+5/2/18 proposal submit
+testing
+design

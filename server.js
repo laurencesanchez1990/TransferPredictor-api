@@ -3,7 +3,9 @@ const app = express()
 var list = require("./playerDataWeek2.json")
 var myteam = require("./raw_myteam.json")
 var _ = require("lodash")
+var cors = require('cors');
 
+app.use(cors());
 
 const getTeam = () => {
 	return _.map(myteam.picks, function(player) { return _.find(list.elements, function(el) { 
@@ -60,4 +62,4 @@ app.get('/api/recommendations', (req, res) => {
 		}})
 	res.json({playersFound: foundPlayers.length, data: foundPlayers})
 })
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3001, () => console.log('Example app listening on port 3001!'))
