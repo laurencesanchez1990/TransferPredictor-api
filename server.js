@@ -4,8 +4,12 @@ var list = require("./playerDataWeek2.json")
 var myteam = require("./raw_myteam.json")
 var _ = require("lodash")
 var cors = require('cors');
+var db = require("./logins.json");
+const bodyParser = require('body-parser');
 
 app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const getTeam = () => {
 	return _.map(myteam.picks, function(player) { return _.find(list.elements, function(el) { 
@@ -62,4 +66,18 @@ app.get('/api/recommendations', (req, res) => {
 		}})
 	res.json({playersFound: foundPlayers.length, data: foundPlayers})
 })
+
+app.post('/api/Login', (req, res) => {
+	console.log(db);
+	const loginResult = db.Logins.find((login)=>{
+		console.log(req.body.email, req.body.password)
+		console.log(login.email, login.password)
+		return (login.email == req.body.email && login.password == req.body.password)
+	})
+	if (loginResult) {
+		return res.status(200).end();
+	}
+	return res.status(401).end();
+})
+
 app.listen(3001, () => console.log('Example app listening on port 3001!'))
