@@ -51,7 +51,6 @@ const getNewPlayer = (playerValue, playerPos) => {
 
 
 app.get('/api/recommendations', (req, res) => {
-	//const lowestScoring = getLowestScoringPlayers()
 	const lowestScoringKeeper = getLowestScoringPlayerByPosition(1)
 	const lowestScoringDef = getLowestScoringPlayerByPosition(2) 
 	const lowestScoringMid = getLowestScoringPlayerByPosition(3) 

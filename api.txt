@@ -13,6 +13,12 @@ create a UI
 
 options:
 sotware development processes - "agile w/ evolutionary prototyping and version control"
-5/2/18 proposal submit
 testing
 design
+
+
+to do:
+enable users to add teams
+registration process
+improve ui
+unit testing
