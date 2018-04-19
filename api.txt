@@ -22,3 +22,8 @@ enable users to add teams
 registration process
 improve ui
 unit testing
+
+npm start
+cd workspace
+cd transferpredictor
+node server.js
